@@ -1,0 +1,1 @@
+Place the LIMARCO logo image here named logo.png (recommended 300x300). The attached logo from the user should be saved as assets/logo.png to display in the header.

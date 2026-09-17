@@ -1,0 +1,6 @@
+[
+  {"id":1,"name":"Polyethylene Water Trough","category":"Farm Hardwear","categoryKey":"farm-hardwear","price":45.00,"image":"pictures/Polyethylene Water Trough.jpg","description":"Durable watering solution for cattle, goats and poultry."},
+  {"id":2,"name":"Dairy Cow (Heifer)","category":"Livestock","categoryKey":"livestock","price":500.00,"image":"pictures/dairy cow.jpg","description":"Healthy heifer, vaccinated and inspected."},
+  {"id":3,"name":"Chicken Feed (25kg)","category":"Consumables","categoryKey":"consumables","price":18.50,"image":"pictures/chicken feed.jpg","description":"Balanced feed for layers and broilers."},
+  {"id":4,"name":"Seeds — Maize (10kg)","category":"Agric Shop","categoryKey":"agric-shop","price":12.00,"image":"pictures/maiz seed.jpg","description":"High-yield hybrid maize seeds (10kg)."}
+]

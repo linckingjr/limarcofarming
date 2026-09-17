@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LIMARCO Farming — Bulawayo, Zimbabwe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-top"></div>
+
+    <div class="header-main">
+      <div class="header-inner">
+        <div class="brand">
+          <a href="/">
+            <img src="logos/logo new white 2.png" alt="LIMARCO Farming logo" class="logo" />
+          </a>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#store">Store</a>
+          <a href="#offers">Offers</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+          <a href="#join-csa">Join CSA</a>
+        </nav>
+        <div class="header-actions">
+          <button id="header-login" class="header-login" type="button" aria-label="Log In">Log In</button>
+          <div id="profile-menu" class="profile-menu" hidden>
+            <button id="profile-trigger" class="profile-trigger" type="button" aria-label="Open account menu" aria-expanded="false">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z" fill="currentColor"/>
+              </svg>
+            </button>
+            <div id="profile-dropdown" class="profile-dropdown" role="menu" aria-label="Account menu">
+              <a href="#account" role="menuitem">My Account</a>
+              <a href="#orders" role="menuitem">My Orders</a>
+              <a href="#logout" role="menuitem">Log Out</a>
+            </div>
+          </div>
+          <a class="btn-primary" href="https://lincarts360sites.wixsite.com/limarco/order-online">Order Online</a>
+          <button id="header-cart" class="header-cart" aria-label="Open cart">
+            <span aria-hidden="true">🛒</span>
+            <span id="header-cart-count" class="header-cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="carousel" id="main-carousel" aria-roledescription="carousel" aria-label="Featured Limarco stories">
+          <button class="carousel-prev" aria-label="Previous slide">‹</button>
+          <div class="carousel-track" aria-live="polite"></div>
+          <button class="carousel-next" aria-label="Next slide">›</button>
+          <div class="carousel-dots" aria-label="Carousel navigation"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h3>About LIMARCO Farming</h3>
+      <p>LIMARCO Farming (Livestock Management and Retail Company)is a Bulawayo-based agricultural company focused on livestock management, farm hardwear, and retail of farming consumables. We support local farmers with quality products and a community forum to share knowledge.</p>
+    </section>
+
+    <section id="welcome" class="welcome">
+      <div class="welcome-popup" aria-label="Welcome to LIMARCO">
+        <div class="welcome-carousel">
+          <article class="welcome-slide is-active">
+            <div class="welcome-slide__media">
+              <img src="pictures/16ac754ea967e0112a97a2e1c76c5f0e.jpg" alt="LIMARCO Farming field operation">
+            </div>
+            <div class="welcome-slide__panel">
+              <span class="welcome-kicker">Welcome</span>
+              <h3>Welcome to LIMARCO</h3>
+              <p>All-Inclusive Agriculture and Livestock Management — quality products, sustainable practices, and community support.</p>
+              <div class="welcome-actions">
+                <a href="#store">Browse products</a>
+                <a href="#contact" class="secondary">Talk to us</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="welcome-slide">
+            <div class="welcome-slide__media">
+              <img src="pictures/2026_04_22_23_34_IMG_1388.JPG" alt="Healthy livestock at LIMARCO Farming">
+            </div>
+            <div class="welcome-slide__panel">
+              <span class="welcome-kicker">Our focus</span>
+              <h3>Healthy farms, stronger outcomes</h3>
+              <p>From livestock care to farm essentials, we support practical farming solutions that help producers grow with confidence.</p>
+              <div class="welcome-actions">
+                <a href="#offers">Explore offers</a>
+                <a href="#forum" class="secondary">Community</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="welcome-slide">
+            <div class="welcome-slide__media">
+              <img src="pictures/2026_06_05_13_06_IMG_3793.JPG" alt="LIMARCO farming crop field">
+            </div>
+            <div class="welcome-slide__panel">
+              <span class="welcome-kicker">Growing together</span>
+              <h3>Built for Zimbabwean agriculture</h3>
+              <p>We connect trusted products, agronomic guidance, and local support for farmers who want dependable, everyday results.</p>
+              <div class="welcome-actions">
+                <a href="#store">Shop now</a>
+                <a href="#about" class="secondary">About us</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="welcome-dots" aria-hidden="true">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="store" class="container store">
+      <div class="store-header">
+        <h3>STORE</h3>
+        <p>Browse our agricultural products</p>
+      </div>
+
+      <div class="categories" aria-label="Product categories">
+        <button data-cat="all" class="active">All</button>
+        <button data-cat="farm-hardwear">Farm Hardware</button>
+        <button data-cat="livestock">Livestock</button>
+        <button data-cat="consumables">Consumables</button>
+        <button data-cat="agric-shop">Agric Shop</button>
+      </div>
+
+      <div id="products" class="products" aria-live="polite"></div>
+
+      <div id="product-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <button class="modal-close" aria-label="Close">×</button>
+          <h4 id="modal-title"></h4>
+          <p id="modal-cat" class="muted"></p>
+          <p id="modal-price" class="price"></p>
+          <p id="modal-desc"></p>
+          <button id="modal-add">Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="offers" class="container offers">
+      <h3>Special Offers</h3>
+      <div class="offers-grid">
+        <div class="offer-card">
+          <img src="https://static.wixstatic.com/media/ef3eacff722648c79da25c362882a4bb.jpg/v1/fill/w_980,h_199,al_c,q_80,enc_avif,quality_auto/ef3eacff722648c79da25c362882a4bb.jpg" alt="Sunrise over the Wheat Field">
+          <h4>Seasonal Seeds</h4>
+          <p>High-yield seeds at competitive prices.</p>
+          <a href="#store" class="button">Shop Now</a>
+        </div>
+        <div class="offer-card">
+          <img src="https://static.wixstatic.com/media/098688_5b0638faed6a45e1880316909139b381~mv2.jpg/v1/fill/w_442,h_250,fp_0.50_0.50,q_30,blur_30,enc_avif,quality_auto/098688_5b0638faed6a45e1880316909139b381~mv2.jpg" alt="Goats">
+          <h4>Quality Livestock</h4>
+          <p>Healthy, disease-free livestock for sale.</p>
+          <a href="#store" class="button">View Livestock</a>
+        </div>
+        <div class="offer-card">
+          <img src="https://static.wixstatic.com/media/fac0fe62af4d43db931ab69725bee26a.jpg/v1/fill/w_442,h_250,fp_0.50_0.50,q_30,blur_30,enc_avif,quality_auto/fac0fe62af4d43db931ab69725bee26a.jpg" alt="Garden">
+          <h4>Agric Shop</h4>
+          <p>Tools, feed and consumables for every farm.</p>
+          <a href="#store" class="button">Browse Shop</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="container blog">
+      <h3>From Our Blog</h3>
+      <div id="blog-list" class="blog-list"></div>
+      <p><a href="https://lincarts360sites.wixsite.com/limarco/blog">Read more on our blog</a></p>
+    </section>
+
+    <section class="info-showcase" aria-label="Limarco information and forum section">
+      <div class="info-showcase__inner">
+        <article id="hours" class="info-card info-card--hours">
+          <div class="info-card__header">
+            <span class="info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 2.75a9.25 9.25 0 1 1 0 18.5 9.25 9.25 0 0 1 0-18.5Zm0 1.7a7.55 7.55 0 1 0 0 15.1 7.55 7.55 0 0 0 0-15.1Zm.75 3.3h-1.5v5.45l4.8 2.8 0.75-1.3-4.05-2.35V7.75Z" fill="currentColor"/></svg>
+            </span>
+            <h3>Operating Hours</h3>
+          </div>
+
+          <div class="hours-table" aria-label="Operating hours schedule">
+            <div class="hours-row">
+              <span>Monday – Friday</span>
+              <strong>8:00 AM – 8:00 PM</strong>
+            </div>
+            <div class="hours-row">
+              <span>Saturday</span>
+              <strong>5:00 PM – 8:00 PM</strong>
+            </div>
+            <div class="hours-row">
+              <span>Sunday</span>
+              <strong>9:00 AM – 5:00 PM</strong>
+            </div>
+          </div>
+        </article>
+
+        <article id="forum" class="info-card info-card--forum">
+          <div class="info-card__header">
+            <span class="info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M16.5 2.5A4.5 4.5 0 0 1 21 7v6.5A4.5 4.5 0 0 1 16.5 18H9.6l-5.1 3.5V18H7.5A4.5 4.5 0 0 1 3 13.5V7A4.5 4.5 0 0 1 7.5 2.5h9Zm0 1.8h-9A2.7 2.7 0 0 0 4.8 7v6.5A2.7 2.7 0 0 0 7.5 16.2h.5v2.5l3.5-2.3h5.1a2.7 2.7 0 0 0 2.7-2.7V7a2.7 2.7 0 0 0-2.7-2.7Zm-8.2 4.4h7.4v1.8H8.3v-1.8Zm0 3.7h5.2v1.8H8.3v-1.8Z" fill="currentColor"/></svg>
+            </span>
+            <h3>Farmers Forum</h3>
+          </div>
+
+          <p class="forum-subtitle">Connect with farmers, share knowledge, ask questions and trade locally.</p>
+
+          <div id="forum-root" class="forum-root">
+            <div id="forum-app" class="forum-app">
+              <form id="new-post-form" class="forum-form" aria-label="New forum post">
+                <div class="field-row">
+                  <label class="field">
+                    <span>Your name</span>
+                    <input id="post-author" name="author" type="text" placeholder="Your name" required />
+                  </label>
+                  <label class="field">
+                    <span>Question / discussion title</span>
+                    <input id="post-title" name="title" type="text" placeholder="Question / discussion title" required />
+                  </label>
+                </div>
+
+                <label class="field">
+                  <span>Share a tip or ask a question</span>
+                  <textarea id="post-body" name="body" rows="5" placeholder="Share a tip or ask a question" required></textarea>
+                </label>
+
+                <div class="forum-actions">
+                  <button type="submit">POST TO FARMERS FORUM</button>
+                </div>
+              </form>
+
+              <div id="posts-list" class="posts-list" aria-live="polite"></div>
+            </div>
+
+            <noscript>
+              <p class="forum-noscript">JavaScript is required to participate in the forum.</p>
+            </noscript>
+          </div>
+        </article>
+
+        <article id="contact" class="info-card info-card--contact">
+          <div class="info-card__header">
+            <span class="info-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 2.5a7.5 7.5 0 0 1 7.5 7.5c0 5.25-7.5 11.5-7.5 11.5S4.5 15.25 4.5 10A7.5 7.5 0 0 1 12 2.5Zm0 2.2A5.3 5.3 0 0 0 6.7 10c0 3.05 4.2 6.95 5.3 7.95 1.1-1 5.3-4.9 5.3-7.95A5.3 5.3 0 0 0 12 4.7Zm0 2.5a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6Z" fill="currentColor"/></svg>
+            </span>
+            <h3>Contact Limarco Farming</h3>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2.5a7.5 7.5 0 0 1 7.5 7.5c0 5.25-7.5 11.5-7.5 11.5S4.5 15.25 4.5 10A7.5 7.5 0 0 1 12 2.5Zm0 2.2A5.3 5.3 0 0 0 6.7 10c0 3.05 4.2 6.95 5.3 7.95 1.1-1 5.3-4.9 5.3-7.95A5.3 5.3 0 0 0 12 4.7Zm0 2.5a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6Z" fill="currentColor"/></svg>
+              </span>
+              <div>
+                <small>Location</small>
+                <p>Bulawayo, Zimbabwe</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.6 2.75h3.2l1.2 4.9-2.2 1.5a14.3 14.3 0 0 0 8.9 8.9l1.5-2.2 4.9 1.2v3.2a2.5 2.5 0 0 1-2.5 2.5A17.1 17.1 0 0 1 4.1 5.25a2.5 2.5 0 0 1 2.5-2.5Zm.2 2.1a.8.8 0 0 0-.8.8v.7l-1.8-.4a.8.8 0 0 0-.9.9 15.7 15.7 0 0 0 15.6 15.6.8.8 0 0 0 .9-.9l-.4-1.8h.7a.8.8 0 0 0 .8-.8V12.3l-4.1.9-1.7-1.7 1.1-3.9-4.1.9-.9.9v2.3Z" fill="currentColor"/></svg>
+              </span>
+              <div>
+                <small>Phone</small>
+                <p><a href="tel:+263771752516">+263 77 1752516</a></p>
+                <p><a href="tel:+263292272229">029 2272229</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-item__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 6.8A2.8 2.8 0 0 1 5.8 4h12.4A2.8 2.8 0 0 1 21 6.8v10.4A2.8 2.8 0 0 1 18.2 20H5.8A2.8 2.8 0 0 1 3 17.2V6.8Zm2.1-.2 6.9 5.5 6.9-5.5H5.1Zm13.1 1.7-6.2 4.9a1.2 1.2 0 0 1-1.4 0L5.8 8.3v8.9h12.4V8.3Z" fill="currentColor"/></svg>
+              </span>
+              <div>
+                <small>Email</small>
+                <p><a href="mailto:info@limarcofarming.co.zw">info@limarcofarming.co.zw</a></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-topbar">
+      <div class="footer-inner">
+        <div class="footer-branding">
+          <h3>LIMARCO FARMING</h3>
+          <p>"Feeding the world"</p>
+        </div>
+        <div class="footer-action-group">
+          <a href="#contact" class="footer-btn secondary">Contact Us</a>
+          <a href="https://lincarts360sites.wixsite.com/limarco/order-online" class="footer-btn primary">Order Online</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-inner footer-grid">
+        <div class="footer-column company-column">
+          <h4>Company / Contact</h4>
+          <div class="company-block">
+            <p class="company-name">LIMARCO FARMING</p>
+            <p class="tagline">"Feeding the world"</p>
+          </div>
+          <ul class="contact-list">
+            <li>97 Warnborough Mansions</li>
+            <li>corner 4th Avenue and JMN Nkomo Street</li>
+            <li>Bulawayo</li>
+            <li>Zimbabwe</li>
+          </ul>
+          <ul class="contact-list phone-list">
+            <li><span>Phone:</span></li>
+            <li>029 2272229</li>
+            <li>+263 77 1752516</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#offers">Offers</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#join-csa">Join CSA</a></li>
+            <li><a href="https://lincarts360sites.wixsite.com/limarco/order-online">Order Online</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Customer / Account</h4>
+          <ul class="footer-links">
+            <li><a href="#account">My Account</a></li>
+            <li><a href="#login">Log In</a></li>
+            <li><a href="#orders">My Orders</a></li>
+            <li><a href="#cart">Cart</a></li>
+            <li><a href="#join-csa">Join CSA</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column social-column">
+          <h4>Follow Us</h4>
+          <div class="social-links" aria-label="Social media links">
+            <a href="https://www.instagram.com/" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm5.25-3.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1z" fill="currentColor"/></svg></a>
+            <a href="https://www.facebook.com/" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3h-3.1V7.5c0-.9.3-1.5 1.7-1.5h1.8V3.1c-.3 0-1.4-.1-2.7-.1-2.6 0-4.4 1.6-4.4 4.5V11H7v3h2.9v8z" fill="currentColor"/></svg></a>
+            <a href="https://x.com/" aria-label="Twitter/X" title="Twitter/X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2h3.5l-7.7 8.8L22.8 22h-7l-5.5-7.2L4.2 22H.7l8.2-9.4L1.2 2h7.2l5 6.5L18.9 2zm-1.1 18h1.9L7.1 3.9H5.1z" fill="currentColor"/></svg></a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5A1.56 1.56 0 1 1 6.9 5.4a1.56 1.56 0 0 1 .04 3.1zM5.5 10h2.9v9H5.5zm5 0h2.8v1.2h.1c.4-.8 1.5-1.7 3.1-1.7 3.3 0 3.9 2.2 3.9 5.1V19h-2.9v-17.7h2.9v3.1h.1c.4-.8 1.4-1.6 3-1.6 3.3 0 4 2.2 4 5.1V19h-2.9v-17.7H5.5z" fill="currentColor"/></svg></a>
+            <a href="https://www.youtube.com/" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.7 12 4.7 12 4.7s-5.7 0-7.5.4A3 3 0 0 0 2.4 7.2 31.2 31.2 0 0 0 2 12a31.2 31.2 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.8.4 7.5.4 7.5.4s5.7 0 7.5-.4a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 22 12a31.2 31.2 0 0 0-.4-4.8zM10 14.8V9.2l5.2 2.8-5.2 2.8z" fill="currentColor"/></svg></a>
+            <a href="https://www.tiktok.com/" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 3c.4 1.5 1.4 2.8 3 3.6v2.7a6.5 6.5 0 0 1-3-1v7.8a5.4 5.4 0 1 1-5.4-5.4c.3 0 .6 0 .9.1V13a3.2 3.2 0 1 0 2.3 3.1V3z" fill="currentColor"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-cta-row">
+      <div class="footer-inner footer-cta-inner">
+        <a href="#report" class="footer-cta-link">Report Scandal / Fraud / Wrongdoing</a>
+        <button type="button" class="footer-cta-button">Book an Appointment</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="footer-inner footer-bottom-inner">
+        <p>© 2026 Limarco Farming. All Rights Reserved.</p>
+        <div class="bottom-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="forum.js" type="module"></script>
+</body>
+</html>
